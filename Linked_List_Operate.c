@@ -23,12 +23,12 @@ int generate_student_linked_list(student** head, student** tail, int count) {
     return (*head) == NULL ? EXIT_FAILURE : EXIT_SUCCESS;
 }
 
-int add_node(student* head, student* node, unsigned int index) {
+int add_node(student* head, student* node, unsigned int position) {
     if (head == NULL || node == NULL)
         return EXIT_FAILURE;
 
     student* current = head;
-    for (int i = 0; i < index - 1; i++) {
+    for (int i = 0; i < position - 1; i++) {
         current = current->next;
         if (current == NULL)
             return EXIT_FAILURE;
@@ -43,12 +43,12 @@ int add_node(student* head, student* node, unsigned int index) {
     return EXIT_SUCCESS;
 }
 
-int remove_node(student* head, unsigned int index) {
+int remove_node(student* head, unsigned int position) {
     if (head == NULL)
         return EXIT_FAILURE;
 
     student* removeThis = head;
-    for (int i = 0; i < index - 1; i++) {
+    for (int i = 0; i < position - 1; i++) {
         removeThis = removeThis->next;
         if (removeThis == NULL || removeThis->next == NULL)
             return EXIT_FAILURE;
