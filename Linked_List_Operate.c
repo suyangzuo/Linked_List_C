@@ -33,6 +33,7 @@ int add_node(student* head, student* node, unsigned int index) {
         if (current == NULL)
             return EXIT_FAILURE;
     }
+
     student* beforeNode = current->previous;
     node->previous = beforeNode;
     node->next = current;

@@ -13,13 +13,13 @@ int main(void) {
     temp->age = 50;
     add_node(head, temp, 4); */
 
-    remove_node(head, 8);
+    // remove_node(head, 8);
 
     student* current = head;
-    int times = 1;
+    int count = 1;
     while (current) {
-        printf("%2d: %p\n", times, current);
+        printf("%2d: %p\n", count, current);
         current = current->next;
-        times++;
+        count++;
     }
 }
